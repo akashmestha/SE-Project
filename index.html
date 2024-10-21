@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Registration</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the form */
+        .registration-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Heading */
+        .registration-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4a90e2;
+        }
+
+        /* Form styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Button styling */
+        .submit-btn {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #357abd;
+        }
+
+        /* Footer text */
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Competition Registration</h2>
+        <form action="submit_registration.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Competition Category:</label>
+                <select id="category" name="category" required>
+                    <option value="coding">Coding Challenge</option>
+                    <option value="quiz">Quiz Competition</option>
+                    <option value="hackathon">Hackathon</option>
+                    <option value="robotics">Robotics</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Register Now</button>
+        </form>
+        <p class="footer-text">© 2024 Competition Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>
